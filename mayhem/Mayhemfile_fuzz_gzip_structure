@@ -1,0 +1,9 @@
+project: savantenvs/foldseek
+target: fuzz_gzip_structure
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gzip_structure/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gzip_structure
+    libfuzzer: true
+    timeout: 10
