@@ -1,0 +1,9 @@
+project: savantenvs/foldseek
+target: fuzz_createdb_3di
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_createdb_3di/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_createdb_3di
+    libfuzzer: true
+    timeout: 10

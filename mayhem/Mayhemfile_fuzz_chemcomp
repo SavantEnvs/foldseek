@@ -1,0 +1,9 @@
+project: savantenvs/foldseek
+target: fuzz_chemcomp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_chemcomp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_chemcomp
+    libfuzzer: true
+    timeout: 10
